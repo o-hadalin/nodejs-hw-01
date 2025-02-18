@@ -9,10 +9,10 @@ const generateContacts = async (number) => {
     const newContacts = [];
     for (let i = 0; i < number; i++) {
       newContacts.push(createFakeContact());
-      const updateContacts = [...currentContacts, ...newContacts];
-      await writeContacts(updateContacts);
-      console.log(`${number} new contacts have been added.`);
     }
+    const updateContacts = [...currentContacts, ...newContacts];
+    await writeContacts(updateContacts);
+    console.log(`${number} new contacts have been added.`);
   } catch (error) {
     console.error('Error generating contacts:', error);
   }
